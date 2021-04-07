@@ -1,8 +1,12 @@
-$("button").on("click", function()
+
+document.getElementById("button").addEventListener("click", function(event){
+        event.preventDefault()
+    });
+const analyzer = () =>
 {
-    var v=0,c=0,n=0,sp=0,sc=0;
-    var s=document.getElementById("dummy").value;
-    document.getElementById("dummy").value="";
+    v=0,c=0,n=0,sp=0,sc=0;
+    var s=document.getElementById("input").value;
+    document.getElementById("input").value="";
     document.getElementById("preview-content").textContent=s;
     for(var i=0;i<s.length;i++)
     {
@@ -31,5 +35,5 @@ $("button").on("click", function()
     document.getElementById("consonants").textContent=c;
     document.getElementById("number").textContent=n;
     document.getElementById("spaces").textContent=sp;
-    document.getElementById("special characters").textContent=sc;
-});
+    document.getElementById("specialCharacters").textContent=sc;
+};
